@@ -1,0 +1,6 @@
+#!/bin/bash
+if [ -n "${WORKERS}" ]; then
+    python server.py --workers $(expr $WORKERS + 0)
+else 
+    python server.py --workers 1
+fi
